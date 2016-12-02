@@ -1,0 +1,1476 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>Chapter05.File and IO</title></head><body><article class="markdown-body"><h1 id="chapter-05-file-and-io"><a name="user-content-chapter-05-file-and-io" href="#chapter-05-file-and-io" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Chapter 05. File and I/O</h1>
+<p><img alt="mind map of File and I/O" src="///F://Learning/Python/Cookbook/Cookbook%20Note/Chapter05/File_and_IO.gif" /></p>
+<h2 id="51-reading-and-writing-text-data"><a name="user-content-51-reading-and-writing-text-data" href="#51-reading-and-writing-text-data" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.1 Reading and Writing Text Data</h2>
+<ul>
+<li>Use the <em>open()</em> function with mode <em>rt</em> to read text file.</li>
+<li>Use the <em>open()</em> with mode <em>wt</em> to write a file, clearing and overwriting the previous contents(if any).</li>
+<li>To append to the end of an existing file, use <em>open()</em> with mode <em>at</em>.</li>
+<li>Files are read/written using the system default text encoding, as can be found in <em>sys.getdefaultencoding()</em>.</li>
+<li>
+<p>If you know that the text you are reading or writing is in a different encoding, supply the optional <em>encoding</em> parameter to <em>open()</em>.<br />
+<pre><code class="python">with open('somefile.txt', 'rt') as f:
+    pass
+with open('somefile.txt', 'wt') as f:
+    pass
+with open('somefile.txt', 'rt', encoding = 'latin-1') as f:
+    pass
+</code></pre></p>
+</li>
+<li>
+<p>If you don&rsquo;t use <em>with</em> statement, make sure you remember to close the file.</p>
+</li>
+<li>All common newline conventions are recognized, and newline characters are converted to a single &ldquo;\n&rdquo; character while reading. If you don&rsquo;t want this translation, supply the <em>newline = &lsquo;&rsquo;</em> argument to <em>open()</em>.</li>
+</ul>
+<h2 id="52-printing-to-a-file"><a name="user-content-52-printing-to-a-file" href="#52-printing-to-a-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.2 Printing to a File</h2>
+<ul>
+<li>Use the <em>file</em> keyword argument to <em>print()</em>.<br />
+<pre><code class="python">with open('somefile.txt', 'at') as f:
+    print('I wanna kiss you!', file = f)
+</code></pre></li>
+</ul>
+<h2 id="53-printing-with-a-different-separator-or-line-ending"><a name="user-content-53-printing-with-a-different-separator-or-line-ending" href="#53-printing-with-a-different-separator-or-line-ending" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.3 Printing with a Different Separator or Line Ending</h2>
+<ul>
+<li>
+<p>Use the <em>sep</em> and <em>end</em> keyword argument to <em>print()</em> to change the output as you wish.<br />
+<pre><code class="python">print('ACME', 50, 91.5)
+print('ACME', 50, 91.5, sep = ',')
+print('ACME', 50, 91.5, sep = ',', end = '!!\n')
+
+# ACME 50 91.5
+# ACME,50,91.5
+# ACME,50,91.5!!
+</code></pre></p>
+</li>
+<li>
+<p>Sometimes you&rsquo;ll see programmers using <em>str.join()</em> to accomplish the same thing.</p>
+</li>
+<li>The problem with <em>str.join()</em> is that it only works with strings.<br />
+<pre><code class="python">print(','.join(('ACME', '50', '91.5')))
+# ACME,50,91.5
+</code></pre></li>
+</ul>
+<h2 id="54-reading-and-writing-binary-data"><a name="user-content-54-reading-and-writing-binary-data" href="#54-reading-and-writing-binary-data" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.4 Reading and Writing Binary Data</h2>
+<ul>
+<li>
+<p>Use the <em>open()</em> function with mode <em>rb</em> or <em>wb</em> to read or write binary data.<br />
+<pre><code class="python">with open('somefile.txt', 'rb') as f:
+    data = f.read()
+with open('somefile.txt', 'wb') as f:
+    f.write(b'Hello World')
+</code></pre></p>
+</li>
+<li>
+<p>If you ever need to read or write text from a binary-mode file, make sure remember to decode or encode it.<br />
+<pre><code class="python">with open('somefile.txt', 'rb') as f:
+    data = f.read(16)
+    text = data.decode('utf-8')
+    print(text)
+with open('somefile.txt', 'wb') as f:
+    text = 'Hello World'
+    f.write(text.encode('utf-8'))
+</code></pre></p>
+</li>
+<li>
+<p>A lesser-known aspect of binary I/O is that objects such as arrays and C structures can be used for writing without any kind of intermediate conversion to a bytes object.</p>
+</li>
+<li>
+<p>This applies to any object that implements the so-called &ldquo;buffer interface&rdquo;, which directly exposes an underlying memory buffer to operations that can work with it.<br />
+<pre><code class="python">import array
+nums = array.array('i', [1, 2, 3, 4])
+with open(&quot;somefile.bin&quot;, 'wb') as f:
+    f.write(nums)
+# 0100 0000 0200 0000 0300 0000 0400 0000
+</code></pre></p>
+</li>
+<li>
+<p>Many objects also allow binary data to be directly read into their underlying memory using the <em>readinto()</em> method of files.<br />
+<pre><code class="python">import array
+nums = array.array('i', [0, 0, 0, 0])
+with open(&quot;somefile.bin&quot;, 'rb') as f:
+    f.readinto(nums)
+print(nums) # array('i', [1, 2, 3, 4])
+</code></pre></p>
+</li>
+</ul>
+<h2 id="55-writing-to-a-file-that-doesnt-already-exist"><a name="user-content-55-writing-to-a-file-that-doesnt-already-exist" href="#55-writing-to-a-file-that-doesnt-already-exist" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.5 Writing to a File That Doesn&rsquo;t Already Exist</h2>
+<ul>
+<li>You want to write data to a file, but only if it doesn&rsquo;t already exist on the filesystem.</li>
+<li>This problem is easily solved by using the little-known <em>x</em> mode to <em>open()</em> instead of the usual <em>w</em> mode.</li>
+<li>An alternative solution is to first test for the file like this:<br />
+<pre><code class="python">import os
+if not os.path.exists('somefile'):
+    with open('somefile', 'wt') as f:
+        f.write('hello\n')
+    else:
+        print('File already exists!')
+</code></pre></li>
+</ul>
+<h2 id="56-performing-io-operations-on-a-string"><a name="user-content-56-performing-io-operations-on-a-string" href="#56-performing-io-operations-on-a-string" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.6 Performing I/O Operations on a String</h2>
+<ul>
+<li>Using the <em>io.StringIO()</em> and <em>io.BytesIO()</em> classes to create file-like objects that operate on string data.</li>
+<li>Be aware that <em>StringIO</em> and <em>BytesIO</em> instances don&rsquo;t have a proper integer file-descriptor.<br />
+<pre><code class="python">&gt;&gt;&gt; import io
+&gt;&gt;&gt; s = io.StringIO()
+&gt;&gt;&gt; s.write('Hello World\n')
+12
+&gt;&gt;&gt; print('This is a test', file = s)
+&gt;&gt;&gt; # Get all of the data written so far
+&gt;&gt;&gt; s.getvalue()
+'Hello World\nThis is a test\n'
+&gt;&gt;&gt; # Wrap a file interface around an existing string
+&gt;&gt;&gt; s = io.StringIO('Hello\nWorld\n')
+&gt;&gt;&gt; s.read(4)
+'Hell'
+&gt;&gt;&gt; s.read()
+</code></pre></li>
+</ul>
+<h2 id="57-reading-and-writing-compressed-datafiles"><a name="user-content-57-reading-and-writing-compressed-datafiles" href="#57-reading-and-writing-compressed-datafiles" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.7 Reading and Writing Compressed Datafiles</h2>
+<ul>
+<li>The <em>gzip</em> and <em>bz2</em> modules make it easy to work with such files. Both modules provide an alternative implementation of <em>open()</em> that can be used for the purpose.</li>
+<li>Both <em>gzip.open()</em> and <em>bz2.open()</em> accept the same parameters as build-in <em>open()</em> function, include <em>encoding, errors, newline</em>, and so forth.</li>
+</ul>
+<h2 id="58-iterating-over-fixed-sized-records"><a name="user-content-58-iterating-over-fixed-sized-records" href="#58-iterating-over-fixed-sized-records" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.8 Iterating Over Fixed-Sized Records</h2>
+<ul>
+<li>Use the <em>iter()</em> function and <em>functools.partial()</em> using this neat trick.</li>
+<li>A little-known feature of the <em>iter()</em> function is that it can create an iterator if you pass it a callable and a snentinel value. The resulting iteratro simply calls the supplied callable over and over again until it returns the sentinel, at which point iteration stops.<br />
+<pre><code class="python">from functools import partial
+
+RECORD_SIZE = 32
+
+with open('somefile.data', 'rb') as f:
+    records = iter(partial(f.read, RECORD_SIZE), b'')
+    for r in records:
+        pass
+</code></pre></li>
+</ul>
+<h2 id="59-reading-binary-data-into-a-mutable-buffer"><a name="user-content-59-reading-binary-data-into-a-mutable-buffer" href="#59-reading-binary-data-into-a-mutable-buffer" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.9 Reading Binary Data into a Mutable Buffer</h2>
+<ul>
+<li>
+<p>To read data into a mutable array, use the <em>readinto()</em> method of files.<br />
+<pre><code class="python">import os.path
+
+def read_into_buffer(filename):
+    buf = bytearray(os.path.getsize(filename))
+    with open(filename, 'rb') as f:
+        f.readinto(buf)
+    return buf
+
+with open('somefile.bin', 'wb') as f:
+    f.write(b'Hello World')
+
+buf = read_into_buffer('somefile.bin')
+print(buf) # bytearray(b'Hello World')
+</code></pre></p>
+</li>
+<li>
+<p>Another interesting feature to use here might be a memoryview, which lets you make zero-copy slices of an existing buffer and even change its contents.</p>
+</li>
+</ul>
+<h2 id="510-memory-mapping-binary-files"><a name="user-content-510-memory-mapping-binary-files" href="#510-memory-mapping-binary-files" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.10 Memory Mapping Binary Files</h2>
+<ul>
+<li>Use the <em>mmap</em> module to memory map files.</li>
+<li>Using <em>mmap</em> to map files into memory can be an efficient and elegant means for randomly accessing the contents of a file.<br />
+<pre><code class="python">import os
+import mmap
+
+def memory_map(filename, access = mmap.ACCESS_WRITE):
+    size = os.path.getsize(filename)
+    fd = os.open(filename, os.O_RDWR)
+    return mmap.mmap(fd, size, access = access)
+
+size = 1000000
+with open('data', 'wb') as f:
+    f.seek(size - 1)
+    f.write(b'\x00')
+
+m = memory_map('data')
+print(len(m))
+print(m[1:10])
+print(m[0])
+m[0:11] = b'Hello World'
+m.close()
+
+with open('data', 'rb') as f:
+    print(f.read(11))
+</code></pre></li>
+</ul>
+<h2 id="511-manipulating-pathnames"><a name="user-content-511-manipulating-pathnames" href="#511-manipulating-pathnames" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.11 Manipulating Pathnames</h2>
+<ul>
+<li>To manipulate pathnames, use the functions in the <em>os.path</em> module.<br />
+<pre><code class="python">import os
+path = 'E:\\AndroidWorkplace\\LockScreenDemo.zip'
+
+print(os.path.basename(path))
+print(os.path.dirname(path))
+print(os.path.join('D:', 'Programs', os.path.basename(path)))
+
+path = '~\\Data\\data.db'
+print(os.path.expanduser(path))
+print(os.path.splitext(path))
+
+# LockScreenDemo.zip
+# E:\AndroidWorkplace
+# D:Programs\LockScreenDemo.zip
+# C:\Users\jin.qu\Data\data.db
+# ('~\\Data\\data', '.db')
+</code></pre></li>
+</ul>
+<h2 id="512-testing-for-the-existence-of-a-file"><a name="user-content-512-testing-for-the-existence-of-a-file" href="#512-testing-for-the-existence-of-a-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.12 Testing for the Existence of a File</h2>
+<ul>
+<li>Use the <em>os.path()</em> module to test for the existence of a file or directory.<br />
+<pre><code class="python">import os
+print(os.path.exists('D:\\Android')) # True
+print(os.path.exists('E:\\Android')) # False
+
+print(os.path.isfile('D:\\Android')) # False
+print(os.path.isdir('D:\\Android'))  # True
+
+print(os.path.getsize('D:\\Programs\\Python\\Python35-32\\NEWS.txt'))  # 310468
+print(os.path.getmtime('D:\\Programs\\Python\\Python35-32\\NEWS.txt')) # 1449354720.0
+
+import time
+print(time.ctime(os.path.getmtime('D:\\Programs\\Python\\Python35-32\\NEWS.txt'))) # Sun Dec  6 06:32:00 2015
+</code></pre></li>
+</ul>
+<h2 id="513-getting-a-directory-listing"><a name="user-content-513-getting-a-directory-listing" href="#513-getting-a-directory-listing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.13 Getting a Directory Listing</h2>
+<ul>
+<li>Use the <em>os.listdir()</em> function to obtain a list of files in a directory</li>
+<li>If you need to filter the data in some way, consider using a list comprehension combined with various functions in the <em>os.path</em> library.</li>
+<li>The <em>startwith()</em> and <em>endwith()</em> methods of strings can be useful for filtering the contents of a directory as well.</li>
+<li>For filename matching, you may want to use the <em>glob</em> or <em>fnmatch</em> modules instead.<br />
+<pre><code class="python">&gt;&gt;&gt; import os
+&gt;&gt;&gt; names = [name for name in os.listdir('F:\\work\\SMR\\SecurityPatch') if os.path.isdir(os.path.join('F:\\work\\SMR\\SecurityPatch', name))]
+&gt;&gt;&gt; names
+['ChangeNotes', 'ReleaseNotes']
+</code></pre></li>
+</ul>
+<h2 id="514-bypassing-filename-encoding"><a name="user-content-514-bypassing-filename-encoding" href="#514-bypassing-filename-encoding" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.14 Bypassing Filename Encoding</h2>
+<ul>
+<li>By default, all filenames are encoded and decoded according to the text encoding returned by <em>sys.getfilesystemencoding()</em>.<br />
+<pre><code class="python">&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.getfilesystemencoding()
+'mbcs'
+</code></pre></li>
+</ul>
+<h2 id="515-printing-bad-filenames"><a name="user-content-515-printing-bad-filenames" href="#515-printing-bad-filenames" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.15 Printing Bad Filenames</h2>
+<ul>
+<li>
+<p>When printing filenames of unknown origin, use this convention to avoid errors.<br />
+<pre><code class="python">def bad_filename(filename):
+    return repr(filename)[1:-1]
+
+try:
+    print(filename)
+except UnicodeEncodeError:
+    print(bad_filename(filename))
+</code></pre></p>
+</li>
+<li>
+<p>The choice of what to do for the <em>bad_filename()</em> function is largely up to you. Another option is to re-encode the value in some way.<br />
+<pre><code class="python">def bad_filename(filename):
+    temp = filename.encode(sys.getfilesystemencoding(), errors = 'surrogateescape')
+    return temp.decode('latin-1')
+</code></pre></p>
+</li>
+</ul>
+<h2 id="516-adding-or-changing-the-encoding-of-an-already-open-file"><a name="user-content-516-adding-or-changing-the-encoding-of-an-already-open-file" href="#516-adding-or-changing-the-encoding-of-an-already-open-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.16 Adding or Changing the Encoding of an Already Open File</h2>
+<ul>
+<li>
+<p>If you want to add Unicode encoding/decoding to an already existing file object that&rsquo;s opened in <strong>binary mode</strong>, wrap it with and <em>io.TextIOWrapper()</em> object.<br />
+<pre><code class="python">import urllib.request
+import io
+
+u = urllib.request.urlopen('http://www.python.org')
+f = io.TextIOWrapper(u, encoding = 'utf-8')
+text = f.read()
+</code></pre></p>
+</li>
+<li>
+<p>If you want to change the encoding of an already open <strong>text-mode</strong> file, use its <em>detach()</em> method to remove the existing text encoding layer before replacing it with a new one.<br />
+<pre><code class="python">import sys
+import io
+print(sys.stdout.encoding) # utf-8
+sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding = 'latin-1')
+print(sys.stdout.encoding) # latin-1
+</code></pre></p>
+</li>
+<li>
+<p>The I/O system is built as a series of layers. You can see the layers yourself by trying this simple example involving a text file.<br />
+<pre><code class="python">f = open('somefile.txt', 'w')
+print(f)
+print(f.buffer)
+print(f.buffer.raw)
+
+# &lt;_io.TextIOWrapper name='somefile.txt' mode='w' encoding='cp936'&gt;
+# &lt;_io.BufferedWriter name='somefile.txt'&gt;
+# &lt;_io.FileIO name='somefile.txt' mode='wb' closefd=True&gt;
+</code></pre></p>
+</li>
+</ul>
+<h2 id="517-writing-bytes-to-a-text-file"><a name="user-content-517-writing-bytes-to-a-text-file" href="#517-writing-bytes-to-a-text-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.17 Writing Bytes to a Text File</h2>
+<ul>
+<li>
+<p>Simply write the byte data to the files underlying buffer. But attribute &lsquo;buffer&rsquo; have been removed in python 3.5<br />
+<pre><code class="python">&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.stdout.write(b'Hello\n')
+Traceback (most recent call last):
+  File &quot;&lt;pyshell#1&gt;&quot;, line 1, in &lt;module&gt;
+    sys.stdout.write(b'Hello\n')
+  File &quot;D:\Programs\Python\Python35-32\lib\idlelib\PyShell.py&quot;, line 1341, in write
+    raise TypeError('must be str, not ' + type(s).__name__)
+TypeError: must be str, not bytes
+&gt;&gt;&gt; sys.stdout.buffer.write(b'Hello\n')
+Traceback (most recent call last):
+  File &quot;&lt;pyshell#2&gt;&quot;, line 1, in &lt;module&gt;
+    sys.stdout.buffer.write(b'Hello\n')
+AttributeError: 'PseudoOutputFile' object has no attribute 'buffer'
+</code></pre><br />
+<pre><code class="python">import sys
+bstdout = open(sys.stdout.fileno(), 'wb', closefd = False)
+bstdout.write(b'Hello World\n')
+bstdout.flush()
+</code></pre></p>
+</li>
+<li>
+<p>Similarly, binary data can be read from a text file by reading from its buffer attribute instead.</p>
+</li>
+</ul>
+<h2 id="518-wrapping-an-existing-file-descriptor-as-a-file-object"><a name="user-content-518-wrapping-an-existing-file-descriptor-as-a-file-object" href="#518-wrapping-an-existing-file-descriptor-as-a-file-object" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.18 Wrapping an Existing File Descriptor As a File Object</h2>
+<ul>
+<li>A file descriptor is different than a normal open file in that it is simply an integer handle assigned by the operating system to refer to some kind of systme I/O channel.</li>
+<li>If you happen to have such a file descriptor , you can wrap a Python file object around it using the <em>open()</em> function.</li>
+<li>When the high-level file object is closed or destroyed, the underlying file descriptor will also be closed. If this is not desired, supply the option <code>closefd = False</code> argument to <em>open()</em>.<br />
+<pre><code class="python">import os
+fd = os.open('somefile.txt', os.O_WRONLY | os.O_CREAT) # Open a low-level file descriptor
+f = open(fd, 'wt') # turn into a proper file
+f.write('Hello World\n')
+f.close()
+</code></pre></li>
+</ul>
+<h2 id="519-making-temporary-files-and-directories"><a name="user-content-519-making-temporary-files-and-directories" href="#519-making-temporary-files-and-directories" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.19 Making Temporary Files and Directories</h2>
+<ul>
+<li>
+<p>The <em>tempfile</em> module has a variety of functions for performing this task. To make an unnamed temporary file, use <em>tempfile.TemporaryFile</em><br />
+<pre><code class="python">from tempfile import TemporaryFile
+
+with TemporaryFile('w+t') as f:
+    f.write('Hello World\n')
+    f.write('Testing\n')
+    f.seek(0)
+    data = f.read()
+</code></pre></p>
+</li>
+<li>
+<p>On most Unix system, the file created by <em>TemporaryFile()</em> is unnamed and won&rsquo;t even have a directory entry. If you want to relax this constraint, use <em>NamedTemporaryFile()</em> instead.</p>
+</li>
+<li>
+<p>If you don&rsquo;t want that temporary file deleted when it&rsquo;s closed, supply a <em>delete = False</em> keyword argument.<br />
+<pre><code class="python">from tempfile import NamedTemporaryFile
+
+with NamedTemporaryFile('w+t') as f:
+    print('filename is:', f.name)
+
+# filename is: C:\Users\jin.qu\AppData\Local\Temp\tmpeu308b8n
+</code></pre></p>
+</li>
+<li>
+<p>To make a temporary directory, use <em>tempfile.TemporaryDirectory()</em>.<br />
+<pre><code class="python">from tempfile import TemporaryDirectory
+with TemporaryDirectory() as dirname:
+    print('dirname is', dirname)
+# dirname is C:\Users\jin.qu\AppData\Local\Temp\tmp3kzp8lia
+</code></pre></p>
+</li>
+<li>
+<p>At a lower level, you can also use the <em>mkstemp()</em> and <em>mkdtemp()</em> to create temporary files and directories.<br />
+<pre><code class="python">&gt;&gt;&gt; import tempfile
+&gt;&gt;&gt; tempfile.mktemp()
+'C:\\Users\\jin.qu\\AppData\\Local\\Temp\\tmpojkv65r1'
+&gt;&gt;&gt; tempfile.mkdtemp()
+'C:\\Users\\jin.qu\\AppData\\Local\\Temp\\tmpk9fbc_k9'
+</code></pre></p>
+</li>
+<li>
+<p>All of the temporary-file-related functions allow you to override this directory as well ass the naming conventions using the <em>prefix</em>, <em>suffix</em>, and <em>dir</em> keyword arguments.</p>
+</li>
+</ul>
+<h2 id="520-communicating-with-serial-ports"><a name="user-content-520-communicating-with-serial-ports" href="#520-communicating-with-serial-ports" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.20 Communicating with Serial Ports</h2>
+<ul>
+<li>Although you can probably do this directly using Python&rsquo;s buily-in I/) primitives, your best be for serial communication is to use the <em>pySerial package</em>.</li>
+<li>The divice name will vary according to the kind of device and operating system.</li>
+<li>Once open, you can read and write data using <em>read()</em>, <em>readline()</em>, and <em>write()</em> calls.<br />
+<pre><code class="python">import serial
+ser = serial.Serial('COM9',
+                    baudrate = 9600,
+                    bytesize = 8,
+                    parity = 'N',
+                    stopbits = 1)
+</code></pre></li>
+</ul>
+<h2 id="521-serializing-python-objects"><a name="user-content-521-serializing-python-objects" href="#521-serializing-python-objects" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.21 Serializing Python Objects</h2>
+<ul>
+<li>The most common approach for serializing data is to use the <em>pickle</em> module.</li>
+<li>To dump an object to a string, use <em>pickle.dumps()</em>.</li>
+<li>
+<p>To recreate an object from a byte stream, use either the <em>pickle.load()</em> or <em>pickle.loads()</em> functions.<br />
+<pre><code class="python">import pickle
+f = open('somedata', 'wb')
+pickle.dump([1, 2, 3, 4], f)
+pickle.dump('hello', f)
+pickle.dump({'Apple', 'Pear', 'Banana'}, f)
+f.close()
+f = open('somedata', 'rb')
+print(pickle.load(f))
+print(pickle.load(f))
+print(pickle.load(f))
+
+# [1, 2, 3, 4]
+# hello
+# {'Pear', 'Banana', 'Apple'}
+</code></pre></p>
+</li>
+<li>
+<p>If you&rsquo;re working with any kind of library that lets you do things such as save/restore Python objects in databases or transmit objects over the network, there&rsquo;s a pretty good chance that <em>pickle</em> is being used.</p>
+</li>
+<li>Certain kinds of objects can&rsquo;t be pickled. There are typically objects that involve some sort of external system state, such as open files, open network connections, threads, processes, stack frames, and so forth.</li>
+<li>User defined classes can sometimes work around these limitations by providing <em><strong>getstate</strong>()</em> and <em><strong>setstate</strong>()</em> methods.<br />
+<pre><code class="python">import time
+import threading
+
+class Countdown:
+    def __init__(self, n):
+        self.n = n
+        self.thr = threading.Thread(target = self.run)
+        self.thr.daemon = True
+        self.thr.start()
+
+    def run(self):
+        while self.n &gt; 0:
+            print('T-minus', self.n)
+            self.n -= 1
+            time.sleep(5)
+
+    def __getstate__(self):
+        return self.n
+
+    def __setstate__(self, n):
+        self.__init__(n)
+</code></pre><br />
+<img alt="test image" src="///F://Learning/Python/Cookbook/Cookbook%20Note/Chapter05/Countdown.png" /></li>
+</ul></article></body></html>
