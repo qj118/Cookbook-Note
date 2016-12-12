@@ -429,7 +429,7 @@ print(pickle.load(f))
 
 - If you're working with any kind of library that lets you do things such as save/restore Python objects in databases or transmit objects over the network, there's a pretty good chance that *pickle* is being used.
 - Certain kinds of objects can't be pickled. There are typically objects that involve some sort of external system state, such as open files, open network connections, threads, processes, stack frames, and so forth.
-- User defined classes can sometimes work around these limitations by providing *__getstate__()* and *__setstate__()* methods.
+- User defined classes can sometimes work around these limitations by providing `__getstate__()` and `__setstate__()` methods.
 ```python
 import time
 import threading

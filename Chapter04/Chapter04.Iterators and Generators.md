@@ -37,8 +37,8 @@ print(next(it))
 
 ## 4.2 Delegating Iteration
 
-- You would like to make iteration work with your new container, all you need to do is define an *__iter__()* method that delegates iteration to the internally held container.
-- Python's iterator protocal requires *__iter__()* to return a special iterator object that implements a *__next__()* method to carry out the actual iteration.
+- You would like to make iteration work with your new container, all you need to do is define an `__iter__()` method that delegates iteration to the internally held container.
+- Python's iterator protocal requires `__iter__()` to return a special iterator object that implements a `__next__()` method to carry out the actual iteration.
 ```python
 class Node:
     def __init__(self, value):
@@ -156,7 +156,7 @@ if __name__ == '__main__':
 ## 4.5 Iterating in Reverse
 
 - Use the built-in *reversed()* function.
-- Reversed iteration only works if the object in question has a size that can be determined or if the object implements a *__reversed__()* special method.
+- Reversed iteration only works if the object in question has a size that can be determined or if the object implements a `__reversed__()` special method.
 - If neither of these can satisfied, you'll have to convert the object into a list first.
 ```python
 a = [1, 2, 3, 4]
@@ -169,7 +169,7 @@ for x in reversed(a):
 # 1
 ```
 
-- Reversed iteration can be customized on user-defined classes if they implement the *__reversed__()* method.
+- Reversed iteration can be customized on user-defined classes if they implement the `__reversed__()` method.
 ```python
 class Countdown:
     def __init__(self, start):
@@ -200,7 +200,7 @@ for x in reversed(cd):
 
 ## 4.6 Defining Generator Functions with Extra State
 
-- If you want a generator to expose extra state to the user, don't forget that you can easily implement it a class, putting the generator function code in the *__iter__()* method.
+- If you want a generator to expose extra state to the user, don't forget that you can easily implement it a class, putting the generator function code in the `__iter__()` method.
 ```python
 from collections import deque
 

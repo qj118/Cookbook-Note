@@ -555,7 +555,7 @@ print(s.format(name='Demon'))
 # KeyError: 'n'
 ```
 
-- One way to avoid this is to define an alternative dictionary class with a *__missing__()* method.
+- One way to avoid this is to define an alternative dictionary class with a `__missing__()` method.
 ```python
 # __missing__()
 s = '{name} has {n} messages.'
